@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>java.exercises</groupId>
-	<artifactId>exercises</artifactId>
+	<artifactId>java.exercises</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>exercises</name>
+	<name>java.exercises</name>
 	<description>Exercises project</description>
 	<properties>
 		<java.version>17</java.version>

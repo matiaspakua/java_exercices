@@ -1,9 +1,9 @@
-package java.exercises.exercises;
+package test.java.exercises;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+@SpringBootTest(classes = main.java.exercises.ExercisesApplication.class)
 class ExercisesApplicationTests {
 
 	@Test

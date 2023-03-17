@@ -1,9 +1,15 @@
-// you can also use imports, for example:
-// import java.util.*;
 
-// you can write to stdout for debugging purposes, e.g.
-// System.out.println("this is a debug message");
+/*
+The function takes an array of integers A as input and returns the smallest positive integer 
+that does not occur in the array.
 
+The implementation uses a boolean array present to keep track of whether each integer from 1 
+to n is present in the input array A. The first loop iterates over the elements of A and sets 
+the corresponding value in the present array to true if the element is a positive integer less 
+than or equal to n. The second loop iterates over the integers from 1 to n and returns the 
+first integer that is not present in the present array. If all integers from 1 to n are present 
+in the present array, the function returns n + 1.
+*/
 class Solution {
     static final int MAX_CONTRAINT = 100000;
     public int solution(int[] A) {

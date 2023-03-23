@@ -1,3 +1,5 @@
+package main.java.HeadFirstJava;
+
 public class BottleSong {
     public static void main(String[] args) {
         int bottlesNum = 10;

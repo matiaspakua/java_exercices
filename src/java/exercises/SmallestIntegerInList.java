@@ -1,3 +1,4 @@
+package main.java.exercises;
 
 /*
 The function takes an array of integers A as input and returns the smallest positive integer 
@@ -12,10 +13,10 @@ in the present array, the function returns n + 1.
 */
 class Solution {
     static final int MAX_CONTRAINT = 100000;
-    public int solution(int[] A) {
+    public int solution(int[] A) throws Exception {
 
         if(checkArrayLimitContraints(A) == false){
-            throw new Exeption();
+            throw new Exception();
         }
         int n = A.length;
         boolean[] present = new boolean[n + 1];

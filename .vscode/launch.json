@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Array",
+            "request": "launch",
+            "mainClass": "JavaDataStructures.Array",
+            "projectName": "java.exercises"
+        },
+        {
+            "type": "java",
+            "name": "ExercisesApplication",
+            "request": "launch",
+            "mainClass": "exercises.ExercisesApplication",
+            "projectName": "java.exercises"
+        },
+        {
+            "type": "java",
+            "name": "BottleSong",
+            "request": "launch",
+            "mainClass": "headFirstJava.BottleSong",
+            "projectName": "java.exercises"
+        },
+        {
+            "type": "java",
+            "name": "DooBee",
+            "request": "launch",
+            "mainClass": "headFirstJava.DooBee",
+            "projectName": "java.exercises"
+        },
+        {
+            "type": "java",
+            "name": "MyFirstApp",
+            "request": "launch",
+            "mainClass": "headFirstJava.MyFirstApp",
+            "projectName": "java.exercises"
+        }
+    ]
+}

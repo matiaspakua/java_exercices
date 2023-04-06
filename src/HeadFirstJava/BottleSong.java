@@ -1,4 +1,7 @@
-package main.java.HeadFirstJava;
+package java.HeadFirstJava;
+
+import java.util.*;
+import java.io.*;
 
 public class BottleSong {
     public static void main(String[] args) {

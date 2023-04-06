@@ -1,4 +1,5 @@
-package main.java.exercises;
+import java.io.*;
+import java.util.*;
 /*
 This method takes an integer numRows as input and returns a list of lists representing 
 the first numRows rows of Pascal's triangle. The method first checks if numRows is zero, 

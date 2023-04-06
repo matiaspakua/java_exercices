@@ -1,6 +1,5 @@
-package main.java.exercises;
-
-import java.util.Stack;
+import java.io.*;
+import java.util.*;
 
 /*
  * Implement in Java a first in first out (FIFO) queue using only two stacks. 
@@ -9,8 +8,13 @@ import java.util.Stack;
  */
 
  public class QueueUsingTwoStacks<T> {
+
     private Stack<T> pushStack;
     private Stack<T> popStack;
+
+    public static void main(String[] args){
+        System.out.println("Make unit Test");
+    }
 
     public QueueUsingTwoStacks() {
         pushStack = new Stack<>();

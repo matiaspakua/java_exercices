@@ -1,4 +1,5 @@
-package main.java.exercises;
+import java.io.*;
+import java.util.*;
 
 /*
 The function takes an array of integers A as input and returns the smallest positive integer 
@@ -11,12 +12,22 @@ than or equal to n. The second loop iterates over the integers from 1 to n and r
 first integer that is not present in the present array. If all integers from 1 to n are present 
 in the present array, the function returns n + 1.
 */
-class Solution {
+
+
+class SmallestIntegerInList {
     static final int MAX_CONTRAINT = 100000;
-    public int solution(int[] A) throws Exception {
+    
+    public static void main(String[] args){
+        int[] parameters = new int[]{1,5,7,3,2,5};
+        System.out.println(solution(parameters));
+        
+    }
+
+    
+    public static int solution(int[] A) {
 
         if(checkArrayLimitContraints(A) == false){
-            throw new Exception();
+            System.out.println("Parameter not valid.");
         }
         int n = A.length;
         boolean[] present = new boolean[n + 1];
@@ -36,7 +47,7 @@ class Solution {
         return smallesIntergerNotInList > MAX_CONTRAINT ? MAX_CONTRAINT : smallesIntergerNotInList;   
     }
 
-    private boolean checkArrayLimitContraints(int[] arrayToCheck){
+    private static boolean checkArrayLimitContraints(int[] arrayToCheck){
         boolean result = true;
         int minContraint = -1000000;
         int maxContraint = 1000000;

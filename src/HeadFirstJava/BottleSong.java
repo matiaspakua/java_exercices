@@ -1,5 +1,3 @@
-package java.HeadFirstJava;
-
 import java.util.*;
 import java.io.*;
 

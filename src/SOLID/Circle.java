@@ -1,6 +1,6 @@
 package SOLID;
 
-public class Circle implements Shape{
+public class Circle implements Shape {
 
 	private int radious = 0;
 

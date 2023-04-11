@@ -16,14 +16,21 @@ public class Main {
 		// L: this element breaks the Liskov Substitution principle.
 		//NoShape noShape = new NoShape();
 
-		List<Shape> shapes = List.of(circle, square, triangle);
+		// I: interface segregation
+		
+		Cube cube = new Cube();
+		
+		List<Shape> shapes = List.of(circle, square, triangle, cube);
 
 		int sum = areaCalculator.sum(shapes);
 
+		// I
+		System.out.println("Cube volumen: " + cube.volumen());
+		
 		System.out.println("Sum is: " + sum);
 		
 		// S: implementing and extracting the methods that print into a new class with a well define
-		// responsibility, we implement the Single Responsability principle.
+		// responsibility, we implement the Single Responsibility principle.
 		ShapesPrinter shapesPrinter = new ShapesPrinter();
 		System.out.println(shapesPrinter.json(sum));
 		System.out.println(shapesPrinter.cvs(sum));

@@ -6,11 +6,11 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		AreaCalculator areaCalculator = new AreaCalculator();
+		IAreaCalculator areaCalculator = new AreaCalculator();
 		Circle circle = new Circle(10);
 		Square square = new Square(10);
 		
-		// O: implementing the interface "shape" we made the area calcular open to extention and close for modification.
+		// O: implementing the interface "shape" we made the area calculator open to extension and close for modification.
 		Triangle triangle = new Triangle();
 		
 		// L: this element breaks the Liskov Substitution principle.
@@ -31,8 +31,9 @@ public class Main {
 		
 		// S: implementing and extracting the methods that print into a new class with a well define
 		// responsibility, we implement the Single Responsibility principle.
-		ShapesPrinter shapesPrinter = new ShapesPrinter();
-		System.out.println(shapesPrinter.json(sum));
-		System.out.println(shapesPrinter.cvs(sum));
+		// D: Dependency Inversion
+		ShapesPrinter shapesPrinter = new ShapesPrinter(areaCalculator);
+		System.out.println(shapesPrinter.json(shapes));
+		System.out.println(shapesPrinter.cvs(shapes));
 	}
 }

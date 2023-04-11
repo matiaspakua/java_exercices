@@ -1,6 +1,6 @@
 package SOLID;
 
-public class Square {
+public class Square implements Shape {
 
 	private int side = 0;
 
@@ -10,6 +10,11 @@ public class Square {
 
 	public double getLenght() {
 		return this.side;
+	}
+
+	@Override
+	public double area() {
+		return Math.pow(getLenght(), 2);
 	}
 
 }

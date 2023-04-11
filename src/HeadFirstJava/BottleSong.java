@@ -1,3 +1,5 @@
+package HeadFirstJava;
+
 import java.util.*;
 import java.io.*;
 

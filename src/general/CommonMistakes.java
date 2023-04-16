@@ -2,14 +2,15 @@ package general;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.ConcurrentModificationException;
 import java.util.Iterator;
+import java.util.List;
 
 public class CommonMistakes {
 
 	public static void main(String[] args) {
 
 		CommonMistakes.concurrentModificationError();
+		CommonMistakes.genericsMixingDataTypes();
 
 	}
 
@@ -24,12 +25,9 @@ public class CommonMistakes {
 		// This action thrown a ConcurrentModificationException
 
 		/*
-		listOfWords.forEach(word -> {
-			if (word.equals("two")) {
-				listOfWords.remove(word);
-			}
-		});
-		*/
+		 * listOfWords.forEach(word -> { if (word.equals("two")) {
+		 * listOfWords.remove(word); } });
+		 */
 
 		/*
 		 * A ConcurrentModificationException is thrown in Java when an object is
@@ -65,6 +63,58 @@ public class CommonMistakes {
 			}
 		}
 		System.out.println("After: " + listOfWords);
+
+	}
+
+	public static void genericsMixingDataTypes() {
+
+		/*
+		 * Here we are using a specific type of collection: ArrayList without specifying
+		 * the collection type and then we iterate over the collection and perform
+		 * operation over the elements. This code thown a ClassCastException.
+		 */
+
+		/**********
+		 * Wrong code
+		 * 
+		 * ArrayList genericList = new ArrayList<>();
+		 * 
+		 * genericList.add(10); genericList.add("20");
+		 * 
+		 * genericList.forEach(value -> System.out.println((int)value * 2));
+		 */
+
+		/*
+		 * To fix the code: 1. Use Generic: List instead of ArrayList and with TYPE. 2.
+		 * Remove the CAST
+		 */
+
+		List<Integer> genericListOfIntegers = new ArrayList<>();
+		genericListOfIntegers.add(10);
+		// genericListOfIntegers.add("20"); // is mark as an error.
+		genericListOfIntegers.add(20);
+
+		// also we can remove the CAST (int)value * 2
+		genericListOfIntegers.forEach(value -> System.out.println(value * 2));
+
+		/*
+		 * When declaring a variable, it is often good practice to use the interface
+		 * type (such as List) rather than a specific implementation type (such as
+		 * ArrayList) to increase flexibility and maintainability of the code.
+		 * 
+		 * Using the interface type allows you to switch to a different implementation
+		 * type (such as LinkedList) without affecting the rest of the code, which can
+		 * be helpful if you need to optimize performance or change requirements. It
+		 * also makes the code more modular and easier to maintain, since the code that
+		 * interacts with the list does not need to know about the specific
+		 * implementation details.
+		 * 
+		 * Additionally, using the interface type promotes a programming paradigm known
+		 * as "programming to the interface", which is a best practice in software
+		 * development. It encourages you to write code that is focused on the behavior
+		 * of the object rather than its implementation, which can lead to more flexible
+		 * and maintainable code.
+		 */
 
 	}
 

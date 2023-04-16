@@ -1,7 +1,7 @@
 package HeadFirstJava;
 
-public class MyFirstApp{
-	public static void main(String[] args){
+public class MyFirstApp {
+	public static void main(String[] args) {
 		System.out.println("I Rule");
 		System.out.println("the world!!");
 	}

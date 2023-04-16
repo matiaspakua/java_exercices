@@ -1,15 +1,17 @@
 package HeadFirstJava;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.Panel;
 
-class Party{
+class Party {
 
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		buildInvite();
 	}
 
-	public static void buildInvite(){
+	public static void buildInvite() {
 		Frame f = new Frame();
 		Label l = new Label("Party at tims");
 		Button b = new Button("You bet!");

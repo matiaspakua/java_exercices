@@ -20,6 +20,10 @@ public class CommonMistakes {
 		CommonMistakes.genericsMixingDataTypes();
 
 		CommonMistakes.compareStringWithEquals();
+		
+		CommonMistakes.useOfIfs();
+		
+		CommonMistakes.ternaryOperators();
 
 	}
 
@@ -150,5 +154,46 @@ public class CommonMistakes {
 		}
 
 	}
+	
+	public static void useOfIfs() {
+		System.out.println("*** MISTAKE #04: Use of Ifs ***");
+		
+		boolean result = "a".equals("A");
+		
+		if(result == true) {
+			// return true;
+			System.out.println("return true");
+		}
+		if(result == false) {
+			// return false;
+			System.out.println("return false");			
+		}
+		
+		// instead of the if, simply: 
+		
+		// return "a".equals("A");
+		
+	}
 
+	public static void ternaryOperators() {
+		
+		System.out.println("*** MISTAKE #05: Use of simple ternary operators. ***");
+		
+		int age = 37;
+		
+		if(age >= 18) {
+			// System.out.println("Adult");
+		}
+		else {
+			// System.out.println("Child");
+		}
+		
+		// Using ternary:
+		
+		final int MINIMUN_AGE = 18;
+		
+		System.out.println(age >= MINIMUN_AGE ? "Adult" : "Child");
+		
+	}
+	
 }

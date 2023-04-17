@@ -5,17 +5,27 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * 
+ * @author matias on AmigosCode youtube video:
+ *         https://www.youtube.com/watch?v=rjDUpxtUPAE
+ *
+ */
 public class CommonMistakes {
 
 	public static void main(String[] args) {
 
 		CommonMistakes.concurrentModificationError();
+
 		CommonMistakes.genericsMixingDataTypes();
+
+		CommonMistakes.compareStringWithEquals();
 
 	}
 
 	public static void concurrentModificationError() {
 
+		System.out.println("*** MISTAKE #01: concurrentModificationException ***");
 		ArrayList<String> listOfWords = new ArrayList<>(Arrays.asList("one", "two", "three"));
 
 		/*
@@ -68,6 +78,7 @@ public class CommonMistakes {
 
 	public static void genericsMixingDataTypes() {
 
+		System.out.println("*** MISTAKE #02: Using Data Type and Generics ***");
 		/*
 		 * Here we are using a specific type of collection: ArrayList without specifying
 		 * the collection type and then we iterate over the collection and perform
@@ -115,6 +126,28 @@ public class CommonMistakes {
 		 * of the object rather than its implementation, which can lead to more flexible
 		 * and maintainable code.
 		 */
+	}
+
+	public static void compareStringWithEquals() {
+
+		System.out.println("*** MISTAKE #03: Using == and .equals() ***");
+		String oneString = "OneString";
+		String secondString = "OneString";
+		String thirdString = new String("OneString");
+
+		if (oneString == secondString) {
+			System.out.println("Comparing using == ");
+		}
+
+		if (oneString == thirdString) {
+			System.out.println("Comparing using == ");
+		} else {
+			System.out.println("Memory directions are diferents of: " + oneString + " and " + thirdString);
+		}
+
+		if (oneString.equals(thirdString)) {
+			System.out.println("Proper use of EQUALS() to compare Strings");
+		}
 
 	}
 

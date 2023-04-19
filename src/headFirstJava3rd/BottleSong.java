@@ -1,4 +1,4 @@
-package hHeadFirstJava3rd;
+package headFirstJava3rd;
 
 public class BottleSong {
 	public static void main(String[] args) {

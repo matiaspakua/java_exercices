@@ -1,4 +1,4 @@
-package hHeadFirstJava3rd;
+package headFirstJava3rd;
 
 import java.awt.Button;
 import java.awt.Frame;

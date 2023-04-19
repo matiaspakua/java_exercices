@@ -1,4 +1,4 @@
-package SOLID;
+package solid;
 
 import java.util.List;
 

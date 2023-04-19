@@ -1,4 +1,4 @@
-package SOLID;
+package solid;
 
 public class Circle implements Shape {
 

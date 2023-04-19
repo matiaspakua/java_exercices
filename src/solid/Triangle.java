@@ -1,4 +1,4 @@
-package SOLID;
+package solid;
 
 public class Triangle implements Shape{
 

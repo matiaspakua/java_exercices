@@ -1,4 +1,4 @@
-package SOLID;
+package solid;
 
 public class Cube implements Shape, ThreeDimentionalShape{
 

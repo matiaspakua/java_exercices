@@ -5,6 +5,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Lambda expressions: a concise way to define anonymous functions and pass them around as data.
+ * @author matias miguez
+ *
+ */
 public class Lambdas {
 	public static void main(String[] args) {
 		

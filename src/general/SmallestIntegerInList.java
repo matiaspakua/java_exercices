@@ -1,8 +1,5 @@
 package general;
 
-import java.io.*;
-import java.util.*;
-
 /*
 The function takes an array of integers A as input and returns the smallest positive integer 
 that does not occur in the array.
@@ -15,51 +12,49 @@ first integer that is not present in the present array. If all integers from 1 t
 in the present array, the function returns n + 1.
 */
 
-
 class SmallestIntegerInList {
-    static final int MAX_CONTRAINT = 100000;
-    
-    public static void main(String[] args){
-        int[] parameters = new int[]{1,5,7,3,2,5};
-        System.out.println(solution(parameters));
-        
-    }
+	static final int MAX_CONTRAINT = 100000;
 
-    
-    public static int solution(int[] A) {
+	public static void main(String[] args) {
+		int[] parameters = new int[] { 1, 5, 7, 3, 2, 5 };
+		System.out.println(solution(parameters));
 
-        if(checkArrayLimitContraints(A) == false){
-            System.out.println("Parameter not valid.");
-        }
-        int n = A.length;
-        boolean[] present = new boolean[n + 1];
+	}
 
-        for (int i = 0; i < n; i++) {
-            if (A[i] > 0 && A[i] <= n) {
-                present[A[i]] = true;
-            }
-        }
+	public static int solution(int[] A) {
 
-        for (int i = 1; i <= n; i++) {
-            if (!present[i]) {
-                return i;
-            }
-        }
-        int smallesIntergerNotInList = n + 1;
-        return smallesIntergerNotInList > MAX_CONTRAINT ? MAX_CONTRAINT : smallesIntergerNotInList;   
-    }
+		if (checkArrayLimitContraints(A) == false) {
+			System.out.println("Parameter not valid.");
+		}
+		int n = A.length;
+		boolean[] present = new boolean[n + 1];
 
-    private static boolean checkArrayLimitContraints(int[] arrayToCheck){
-        boolean result = true;
-        int minContraint = -1000000;
-        int maxContraint = 1000000;
+		for (int i = 0; i < n; i++) {
+			if (A[i] > 0 && A[i] <= n) {
+				present[A[i]] = true;
+			}
+		}
 
-        for (int i = 0; i < arrayToCheck.length; i++){
-            if(arrayToCheck[i] > maxContraint || arrayToCheck[i] < minContraint ){
-                result = false;
-                break;
-            }
-        }
-        return result;
-    }
+		for (int i = 1; i <= n; i++) {
+			if (!present[i]) {
+				return i;
+			}
+		}
+		int smallesIntergerNotInList = n + 1;
+		return smallesIntergerNotInList > MAX_CONTRAINT ? MAX_CONTRAINT : smallesIntergerNotInList;
+	}
+
+	private static boolean checkArrayLimitContraints(int[] arrayToCheck) {
+		boolean result = true;
+		int minContraint = -1000000;
+		int maxContraint = 1000000;
+
+		for (int i = 0; i < arrayToCheck.length; i++) {
+			if (arrayToCheck[i] > maxContraint || arrayToCheck[i] < minContraint) {
+				result = false;
+				break;
+			}
+		}
+		return result;
+	}
 }
